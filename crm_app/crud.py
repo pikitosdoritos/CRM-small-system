@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Session
-import database, models, schemas
+from . import database, models, schemas
 
 def create_client(db: Session, client: schemas.ClientCreate):
     data = client.model_dump(exclude_unset=True)
